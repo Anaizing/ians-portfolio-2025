@@ -125,6 +125,27 @@ const NotesApp = ({ isOpen, onClose }: NotesAppProps) => {
         );
     };
 
+    const renderCourses = () => (
+        <div className="space-y-6">
+            {renderBackButton()}
+            <h2 className="text-2xl font-bold text-gray-200 mb-6">Courses</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {courses.map((item, index) => {
+                    const itemId = `courses-${index}`;
+                    return (
+                        <div key={itemId} className="bg-gray-800/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <h3 className="text-xl font-semibold text-gray-200 mb-2">{item.title}</h3>
+                            <div className="text-gray-300 mb-2">{item.institution}, {item.location}</div>
+                            <div className="text-gray-400 mb-3">{item.year}</div>
+                            <p className="text-gray-300 mb-4">{item.description}</p>
+                            {item.images && item.images.length > 0 && renderImageCarousel(itemId, item.images)}
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+
     const renderEducation = () => (
         <div className="space-y-6">
             {renderBackButton()}
@@ -168,27 +189,6 @@ const NotesApp = ({ isOpen, onClose }: NotesAppProps) => {
                                     ))}
                                 </div>
                             )}
-                            {item.images && item.images.length > 0 && renderImageCarousel(itemId, item.images)}
-                        </div>
-                    );
-                })}
-            </div>
-        </div>
-    );
-
-    const renderCourses = () => (
-        <div className="space-y-6">
-            {renderBackButton()}
-            <h2 className="text-2xl font-bold text-gray-200 mb-6">Courses</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {courses.map((item, index) => {
-                    const itemId = `courses-${index}`;
-                    return (
-                        <div key={itemId} className="bg-gray-800/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                            <h3 className="text-xl font-semibold text-gray-200 mb-2">{item.title}</h3>
-                            <div className="text-gray-300 mb-2">{item.institution}, {item.location}</div>
-                            <div className="text-gray-400 mb-3">{item.year}</div>
-                            <p className="text-gray-300 mb-4">{item.description}</p>
                             {item.images && item.images.length > 0 && renderImageCarousel(itemId, item.images)}
                         </div>
                     );
@@ -278,18 +278,19 @@ const NotesApp = ({ isOpen, onClose }: NotesAppProps) => {
             <h2 className="text-2xl font-bold text-gray-200 mb-6">My Notes</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Competitions */}
+                
+                {/* Courses */}
                 <div
                     className="bg-gray-800/50 p-4 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-colors"
-                    onClick={() => handleSectionClick('competitions')}
+                    onClick={() => handleSectionClick('courses')}
                 >
                     <div className="flex items-center gap-3 mb-2">
-                        <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center">
-                            <FaTrophy size={28} className="text-white" />
+                        <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center">
+                            <FaBookOpen size={28} className="text-white" />
                         </div>
-                        <h3 className="text-xl font-semibold text-gray-200">Competitions</h3>
+                        <h3 className="text-xl font-semibold text-gray-200">Courses</h3>
                     </div>
-                    <p className="text-gray-400">View my competition history and achievements</p>
+                    <p className="text-gray-400">Check out courses I have completed</p>
                 </div>
 
                 {/* Education */}
@@ -319,6 +320,21 @@ const NotesApp = ({ isOpen, onClose }: NotesAppProps) => {
                     </div>
                     <p className="text-gray-400">Explore my professional work experience</p>
                 </div>
+
+                {/* Competitions */}
+                <div
+                    className="bg-gray-800/50 p-4 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-colors"
+                    onClick={() => handleSectionClick('competitions')}
+                >
+                    <div className="flex items-center gap-3 mb-2">
+                        <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center">
+                            <FaTrophy size={28} className="text-white" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-200">Competitions</h3>
+                    </div>
+                    <p className="text-gray-400">View my competition history and achievements</p>
+                </div>
+                
                 {/* Extracurricular Roles */}
                 <div
                     className="bg-gray-800/50 p-4 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-colors"
@@ -345,19 +361,6 @@ const NotesApp = ({ isOpen, onClose }: NotesAppProps) => {
                         <h3 className="text-xl font-semibold text-gray-200">Extracurricular Activities</h3>
                     </div>
                     <p className="text-gray-400">My participation in events and activities</p>
-                </div>
-                {/* Courses */}
-                <div
-                    className="bg-gray-800/50 p-4 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-colors"
-                    onClick={() => handleSectionClick('courses')}
-                >
-                    <div className="flex items-center gap-3 mb-2">
-                        <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center">
-                            <FaBookOpen size={28} className="text-white" />
-                        </div>
-                        <h3 className="text-xl font-semibold text-gray-200">Courses</h3>
-                    </div>
-                    <p className="text-gray-400">Check out courses I have completed</p>
                 </div>
 
                 {/* Skills */}

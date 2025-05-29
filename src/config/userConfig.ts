@@ -9,53 +9,59 @@ import portfolio from './projects/portfolio.json';
 import foodies from './projects/foodies.json';
 export const userConfig = {
     // Personal Information
-    name: 'Abdelrahman Saleh',
-    role: 'Software Developer - Backend Developer',
-    location: 'Giza, Egypt',
-    email: 'aabdoo2304@gmail.com',
-    website: 'aabdoo23',
+    name: 'Ian Araya',
+    role: 'Software Engineer - XR Game Developer - Fullstack Developer',
+    location: 'Sydney, Australia',
+    email: 'ian.araya.soggyinkgames@gmail.com',
+    website: 'notyetdeployed.com',
     roleFocus: 'Backend Development using .NET, C#, Entity Framework, SQL Server, and Bootstrap. Can also work with Angular, React, and Node.js.',
-    age: 23,    
+    
+    // image
+    portfolio: {
+        url: '/assets/images/ian-portfolio.png',
+        alt: 'Ian Portfolio',
+        className: 'w-full h-full aspect-square object-cover'
+      },
 
     // Social Links
     social: {
-        github: 'https://github.com/aabdoo23',
-        linkedin: 'https://www.linkedin.com/in/aabdoo23/', // Add your LinkedIn URL
+        github: 'https://github.com/anaizing',
+        linkedin: 'https://www.linkedin.com/in/ian-araya-soggyinkgames/', // Add your LinkedIn URL
     },
 
     // Contact Information
     contact: {
-        email: 'aabdoo2304@gmail.com',
-        phone: '+201007952039', // Add your phone number
-        calendly: 'https://calendly.com/aabdoo2304', // Add your Calendly URL
+        email: 'ian.araya.soggyinkgames@gmail.com',
+        phone: '+61451222727', // Add your phone number
+        calendly: 'https://calendly.com/ianaraya', // Add your Calendly URL
     },
 
     // Spotify Configuration
     spotify: {
-        playlistId: '5WsS94KKm5wDhgEpg8VcgM', // Your Spotify playlist ID
+        playlistId: '7vR6CplH3gBM0zXGuryefx', // Your Spotify playlist ID
         playlistName: 'Coding-Time',
     },
 
     // Resume Configuration
     resume: {
-        url: 'https://drive.google.com/file/d/1ZyaeXLpdOtPUygFCu55yYCQSEdW3K4pm/view',
+        url: 'https://drive.google.com/file/d/1SiCaTKmCuV8-131a2n7O-CNf6qhFxpRn/view?usp=sharing',
         localPath: '/resume.pdf',
     },
 
     // Education Background
     education: [
         {
-            degree: "Bachelor of Computer Science",
+            degree: "Architectural Technology",
             major: "Biomedical Informatics",
-            institution: "Nile University",
-            location: "Giza, Egypt",
-            year: "2021-2025",
+            institution: "Sydney Institute of Technology",
+            location: "Sydney, Australia",
+            year: "2006-2009",
             description: "Relevant coursework: Data Structures, Algorithms, Database Management, Software Engineering, Biomedical Informatics, Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Computer Networks, Operating Systems, Computer Architecture, Computer Organization, Computer Security, Computer Graphics, Computer Systems, Computer Networks, Operating Systems, Computer Architecture, Computer Organization, Computer Security, Computer Graphics, Computer Systems",
             images: [
                 {
                     url: "https://www.nu.edu.eg/sites/default/files/2024-06/whatsapp_image_2024-06-25_at_1.33.17_pm.jpeg",
-                    alt: "Nile University",
-                    description: "Nile University Campus"
+                    alt: "Sydney Institute of Technology",
+                    description: "Sydney Institute of Technology"
                 }
             ]
         }
@@ -63,30 +69,58 @@ export const userConfig = {
 
     courses: [
         {
-            title: "IOT",
-            description: "IOT course",
-            institution: "ITI",
-            location: "Cairo, Egypt",
-            year: "2023-2024",
+            title: "AI Agent: From Prototype to Production",
+            description: "FrontendMasters course",
+            institution: "FrontendMasters",
+            location: "Online",
+            year: "2025",
             images: [
                 {
-                    url: "https://iti.gov.eg/assets/images/ColoredLogo.svg",
-                    alt: "ITI",
-                    // description: "ITI Campus"
+                    url: "https://res.cloudinary.com/soggy-ink-games/image/upload/v1748526891/certificates/ai-agent-from-prototype-to-prod_j2dbvq.png",
+                    alt: "FrontendMasters",
+                    description: "Ian built production-ready AI apps. Wrote evals to measure LLM and tool accuracy. Implemented a Retrieval Augmented Generation (RAG) pipeline and explored how structured outputs provide a predictable schema for LLM responses. Responsibly managed costs and token limits with proper context memory management. Built better guardrails within the system with human-in-the-loop best practices."
                 }
             ]
         },
         {
-            title: ".NET full stack course",
-            description: ".NET full stack course",
-            institution: "Digital Egypt Pioneers Initiative - DEPI",
-            location: "Cairo, Egypt",
-            year: "2024",
+            title: "AI Agents from Scratch",
+            description: "AI Agents from Scratch",
+            institution: "FrontendMasters",
+            location: "Online",
+            year: "2025",
             images: [
                 {
-                    url: "https://depi.gov.eg/assets/images/proAr.png",
-                    alt: "DEPI",
-                    // description: "DEPI Logo"
+                    url: "https://res.cloudinary.com/soggy-ink-games/image/upload/v1748526316/certificates/ai-agents-from-scratch_qivz9a.png",
+                    alt: "FrontendMasters",
+                    description: "Created his own AI agent! Built a command line messaging interface and an agent loop to continuously interact with the user. Coded tools from scratch for retrieving information and generating images from Dall-E. Managed the chat history to provide context with each prompt. Learned the bleeding-edge design patterns and resources for building modern agent-based API apps."
+                }
+            ]
+        },
+        {
+            title: "AI Agent: From Prototype to Production",
+            description: "FrontendMasters course",
+            institution: "FrontendMasters",
+            location: "Online",
+            year: "2025",
+            images: [
+                {
+                    url: "https://res.cloudinary.com/soggy-ink-games/image/upload/v1748526891/certificates/ai-agent-from-prototype-to-prod_j2dbvq.png",
+                    alt: "FrontendMasters",
+                    description: "Ian built production-ready AI apps. Wrote evals to measure LLM and tool accuracy. Implemented a Retrieval Augmented Generation (RAG) pipeline and explored how structured outputs provide a predictable schema for LLM responses. Responsibly managed costs and token limits with proper context memory management. Built better guardrails within the system with human-in-the-loop best practices."
+                }
+            ]
+        },
+        {
+            title: "AI Agents from Scratch",
+            description: "AI Agents from Scratch",
+            institution: "FrontendMasters",
+            location: "Online",
+            year: "2025",
+            images: [
+                {
+                    url: "https://res.cloudinary.com/soggy-ink-games/image/upload/v1748526316/certificates/ai-agents-from-scratch_qivz9a.png",
+                    alt: "FrontendMasters",
+                    description: "Created his own AI agent! Built a command line messaging interface and an agent loop to continuously interact with the user. Coded tools from scratch for retrieving information and generating images from Dall-E. Managed the chat history to provide context with each prompt. Learned the bleeding-edge design patterns and resources for building modern agent-based API apps."
                 }
             ]
         }
@@ -94,27 +128,26 @@ export const userConfig = {
 
     skills: [
         "C#",
-        "ASP.NET Core",
-        "Entity Framework",
-        "SQL Server",
-        "C++",
-        "Python",
-        "Java",
-        "Spring Boot",
-        "Hibernate",
+        "DOTS",
+        "Unity",
+        "XR/VR/AR",
         "JavaScript",
         "TypeScript",
         "React",
         "Node.js",
+        "CSS",
+        "HTML",
+        "GraphQL",
+        "Python",
+        "ASP.NET Core",
         "MongoDB",
         "MySQL",
-        "PostgreSQL",
-        "Docker",
-        "MongoDB",
         "SQL Server",
-        "MySQL",
         "PostgreSQL",
-        "Docker",
+        "GoogleAPI",
+        "Blender",
+        "Photoshop",
+        "Git",
     ],
 
     extraCurricularRoles: [
@@ -527,9 +560,9 @@ export const userConfig = {
 
     // SEO Configuration
     seo: {
-        title: 'Abdelrahman Saleh - Software Developer',
-        description: 'Software Developer based in Egypt specializing in React, Node.js, and modern web technologies',
-        keywords: ['Software Developer', 'React', 'Node.js', 'Web Development', 'Egypt'],
+        title: 'Ian Araya - Software Engineer - XR Game Developer',
+        description: 'A FULLSTACK SOFTWARE ENGINEER & XR GAME DEVELOPER BASED IN SYDNEY. I HAVE OVER 7 YEARS EXPERIENCE IN SOFTWARE DEVELOPMENT AND ALL THINGS DIGITAL ',
+        keywords: ['Software Engineer', 'XR Game Developer', 'React', 'Node.js', 'Web Development','Game Development', 'Sydney'],
     },
 
     // Theme Configuration

@@ -223,11 +223,11 @@ export default function MacToolbar({
               {userConfig.name}
             </span>
             {showSignature && (
-              <div className="absolute top-full left-0 mt-1 bg-white/98 backdrop-blur-sm rounded-lg p-4 shadow-xl z-[100]">
+              <div className="absolute top-full left-0 mt-1 bg-white/98 backdrop-blur-sm rounded-lg shadow-xl z-[100]">
                   <img 
-                    src="/src/assets/images/me.svg" 
+                    src="/src/assets/images/ian-portfolio.png" 
                     alt="Signature" 
-                    className="w-[100px] h-[100px]"
+                    className="w-[100px] h-[100px] object-cover"
                   />
               </div>
             )}
